@@ -1,8 +1,8 @@
-# Sitecore Next.js CWS Sample
+# Sitecore Next.js for CWS client Sample Project Setup
 
 This is a simple CWS project repo created by 7kc team
 
-A modern Sitecore Next.js implementation using Content Web Services (CWS) and the Sitecore Content SDK.
+A modern Sitecore Next.js
 
 ## Overview
 
