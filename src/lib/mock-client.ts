@@ -111,10 +111,7 @@ function buildPage(path: string | string[] | undefined, locale?: string): Siteco
           placeholders: {},
           fields: {
             Text: {
-              value:
-                '<header style="background-color: #1f2933; color: #ffffff; padding: 1rem; border-radius: 0.5rem;">\
-                  <div style="font-size: 1.25rem; font-weight: 600;">Sitecore CWS Starter</div>\
-                </header>',
+              value: 'Header',
             },
           },
           params: {},
@@ -130,7 +127,7 @@ function buildPage(path: string | string[] | undefined, locale?: string): Siteco
               datasource: {
                 field: {
                   jsonValue: {
-                    value: 'Welcome to Sample CWS starter Project setup',
+                    value: 'Main content : Welcome to Sample CWS starter Project setup',
                   },
                 },
                 url: { path: '/', siteName: defaultSite },
@@ -149,10 +146,7 @@ function buildPage(path: string | string[] | undefined, locale?: string): Siteco
           placeholders: {},
           fields: {
             Text: {
-              value:
-                '<footer style="margin-top: 2rem; padding: 1rem; border-radius: 0.5rem; background-color: #1f2933; color: #f3f4f6; text-align: center;">\
-                  <small>Mock data generated locally — customize in src/lib/mock-client.ts.</small>\
-                </footer>',
+              value: 'Footer',
             },
           },
           params: {},
