@@ -21,9 +21,7 @@ function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element
         lngDict={dictionary}
         locale={pageProps.page?.locale || scConfig.defaultLanguage}
       >
-        <h1>This is the sitecore component</h1>
         <Component {...rest} />
-        <h1>wrapper bottom</h1>
       </I18nProvider>
     </>
   );

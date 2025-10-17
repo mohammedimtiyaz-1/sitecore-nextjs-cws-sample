@@ -99,11 +99,27 @@ function buildPage(path: string | string[] | undefined, locale?: string): Siteco
 
   const route: RouteData = {
     name: routeName || 'home',
-    displayName: 'Mock Page',
+    displayName: 'CWS Sample Page',
     fields: {
-      Title: { value: 'Mock Page' },
+      Title: { value: 'CWS sample' },
     },
     placeholders: {
+      'headless-header': [
+        {
+          uid: 'mock-header',
+          componentName: 'RichText',
+          placeholders: {},
+          fields: {
+            Text: {
+              value:
+                '<header style="background-color: #1f2933; color: #ffffff; padding: 1rem; border-radius: 0.5rem;">\
+                  <div style="font-size: 1.25rem; font-weight: 600;">Sitecore CWS Starter</div>\
+                </header>',
+            },
+          },
+          params: {},
+        },
+      ],
       'headless-main': [
         {
           uid: 'mock-title',
@@ -112,27 +128,36 @@ function buildPage(path: string | string[] | undefined, locale?: string): Siteco
           fields: {
             data: {
               datasource: {
-                field: { jsonValue: { value: 'Welcome to Skate Park' } },
+                field: {
+                  jsonValue: {
+                    value: 'Welcome to Sample CWS starter Project setup',
+                  },
+                },
                 url: { path: '/', siteName: defaultSite },
               },
             },
           },
-          params: {},
+          params: {
+            styles: 'text-center',
+          },
         },
+      ],
+      'headless-footer': [
         {
-          uid: 'mock-content',
-          componentName: 'PageContent',
+          uid: 'mock-footer',
+          componentName: 'RichText',
           placeholders: {},
           fields: {
-            Content: {
-              value: '<p>This is sample rich text rendered in disconnected mode.</p>',
+            Text: {
+              value:
+                '<footer style="margin-top: 2rem; padding: 1rem; border-radius: 0.5rem; background-color: #1f2933; color: #f3f4f6; text-align: center;">\
+                  <small>Mock data generated locally — customize in src/lib/mock-client.ts.</small>\
+                </footer>',
             },
           },
           params: {},
         },
       ],
-      'headless-header': [],
-      'headless-footer': [],
     },
   };
 

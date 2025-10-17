@@ -62,7 +62,7 @@ export const Default = ({ params, fields }: TitleProps): JSX.Element => {
       {page.mode.isEditing ? (
         <Text field={titleField} />
       ) : (
-        <Link field={link}>
+        <Link field={link} className="flex ">
           <Text field={titleField} />
         </Link>
       )}
